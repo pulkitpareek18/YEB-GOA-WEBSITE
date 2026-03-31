@@ -1,0 +1,119 @@
+/* --- HERO --- */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  background: var(--navy-dark);
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  color: var(--white);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.heroDesc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+/* --- GROUP HEADER --- */
+.groupHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.groupHeader h2 {
+  margin-bottom: 4px;
+}
+
+/* --- MEMBER GRID --- */
+.memberGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.memberCard {
+  text-align: center;
+  transition: var(--transition);
+  width: 180px;
+}
+
+.memberCard:hover {
+  transform: translateY(-4px);
+}
+
+.memberPhoto {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--gray-200);
+  transition: var(--transition);
+}
+
+.memberCard:hover .memberPhoto {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.memberPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.memberName {
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.memberRole {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  font-weight: 500;
+  line-height: 1.4;
+  display: block;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .memberGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .memberPhoto {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 56px;
+  }
+  .memberGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .memberPhoto {
+    width: 100px;
+    height: 100px;
+  }
+}
